@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.btn {
+	background: black;
+	border-radius: 5px;
+	min-width: 150px;
+	padding: 1em 2em;
+	font-size: 1.2rem;
+}
+
+.btn-back,
+.btn-next,
+.btn-refresher {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.btn-back {
+	border: 2px solid hotpink;
+	color: hotpink;
+}
+
+.btn-back:hover,
+.btn-back:focus {
+	animation-name: back-animation;
+	animation-duration: 1s;
+	border: rgba(0, 0, 0, 0.7) solid;
+}
+
+@keyframes back-animation {
+	0% {
+		box-shadow: inset 9em 0 0 0 hotpink;
+		color: black;
+	}
+}
+
+.btn-refresher {
+	border: 2px solid orange;
+	color: orange;
+}
+
+.btn-refresher:hover,
+.btn-refresher:focus {
+	animation-name: refresher-animation;
+	animation-duration: .65s;
+    
+}
+
+@keyframes refresher-animation {
+	100% {
+        box-shadow: 0 0 0 .20rem orange;
+    }
+}
+
+.btn-next {
+	border: 2px solid greenyellow;
+	color: greenyellow;
+}
+
+.btn-next:hover,
+.btn-next:focus {
+	animation-name: next-animation;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	border: rgba(0, 0, 0, 0.7) solid;
+}
+
+@keyframes next-animation {
+	100% {
+		box-shadow: inset 9em 0 0 0 greenyellow;
+		color: black;
+	}
+}
